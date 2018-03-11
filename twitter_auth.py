@@ -14,7 +14,7 @@ def first_twitter():
 def tweet_run():
 	one=request.args["one"]
 	two=request.args["two"]
-	driver = webdriver.Chrome(executable_path=r"C:\Users\C5261007\Desktop\chromedriver.exe") 		#call the webdriver
+	driver = webdriver.Chrome(executable_path=r"path to chrome webdriver") 		#call the webdriver
 	driver.get("https://apps.twitter.com/") #call twitter
 	sign=driver.find_element_by_css_selector("#globalnav > div > div.d-block.d-block-menu.signed-out.profile-menu > a")
 	signin=sign.click()  		#click on sign-in
@@ -29,7 +29,7 @@ def tweet_run():
 		app=driver.find_element_by_css_selector("#no-apps > div > a")
 		app.click()
 		username=driver.find_element_by_id("edit-name")
-		username.send_keys("himanshu121")
+		username.send_keys("username")
 		description=driver.find_element_by_id("edit-description")
 		description.send_keys("testcase for trial")
 		website=driver.find_element_by_id("edit-url")
@@ -54,7 +54,7 @@ def tweet_run():
 		file.close()
 	
 	
-	#driver.quit()
+	driver.quit()
 	return "success"
 	
 
