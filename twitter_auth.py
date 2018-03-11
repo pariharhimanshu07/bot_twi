@@ -19,11 +19,10 @@ def tweet_run():
 	sign=driver.find_element_by_css_selector("#globalnav > div > div.d-block.d-block-menu.signed-out.profile-menu > a")
 	signin=sign.click()  		#click on sign-in
 	user=driver.find_element_by_css_selector("#page-container > div > div.signin-wrapper > form > fieldset > div:nth-child(2) > input")
-	user.send_keys(one)
-	#user.send_keys("cruzoswanntechnologies@gmail.com") 		#enter user credentials
+	user.send_keys(one)		#enter user credentials
 	password=driver.find_element_by_css_selector("#page-container > div > div.signin-wrapper > form > fieldset > div:nth-child(3) > input")
 	password.send_keys(two)
-	#password.send_keys("manchaster")
+	
 	password.send_keys(Keys.ENTER)		#enter password
 	try:
 		app=driver.find_element_by_css_selector("#no-apps > div > a")
